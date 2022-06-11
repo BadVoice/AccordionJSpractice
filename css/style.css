@@ -1,30 +1,103 @@
-@import url('../css/main.css');
-@import url('../css/core.css');
-@import url('../css/checkbox.css');
-@import url('../css/header.css');
-@import url('../css/button.css');
-@import url('../css/payment.css');
-@import url('../css/footer.css');
-@import url('../css/calc.css');
-:root {
-    --color-white: #fff;
-    --color-black: #2D3436;
-    --color-gray-64: #5C5C5C;
-    --color-gray-48: #858585;
-    --color-gray-32: #ADADAD;
-    --color-gray-24: #C2C2C2;
-    --color-pink-light: #FD79A8;
-    --color-rgba-gray: rgba(194, 194, 194, 0.24);
-    --font-family-r: InterR, sans-serif;
-    --font-family-m: InterM500, sans-serif;
-    --font-family-b-700: InterB700, sans-serif;
-    --font-family-b-800: InterExtraBold800, sans-serif;
-    --font-family-b-900: InterExtraBold900, sans-serif;
-    --animation-speed: .3s;
-    --animation-func: ease;
-    --animation: var(--animation-speed) var(--animation-func);
+@import 'global.css';
+@import 'normalize.css';
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
-:root {
-    --font-family-r: RobotoR, sans-serif;
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+.accordion {
+    background: #21212c;
+    border-radius: 12px;
+    color: #bbc4d2;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.accordion__control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 20px;
+}
+
+.accordion__control::before {
+    background-color: #888;
+}
+
+.accordion__control::-webkit-details-marker {
+    display: none;
+}
+
+.accordion__title {
+    margin: 0;
+}
+
+.accordion__icon {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    color: #8787a2;
+}
+
+.accordion__icon::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 1px;
+    background-color: #000;
+    transform: translate(-50%, -50%);
+}
+
+.accordion__icon::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1px;
+    height: 50%;
+    background-color: #000;
+    transform: translate(-50%, -50%);
+}
+
+.accordion__content {
+    padding: 20px;
+    border-top: 1px solid transparent;
+}
+
+.accordion[open] .accordion__icon {
+    transform: rotate(45deg);
+}
+
+.overlay.show {
+    visibility: visible;
+}
+
+.overlay {
+    background: rgba(21, 21, 31, .98);
+    height: 100%;
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    width: 100%;
+    z-index: 998;
 }
