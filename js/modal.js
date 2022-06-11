@@ -4,8 +4,8 @@ const modalHide = document.querySelector('.modal__inner')
 
 modalFaq.addEventListener(('click'), () => {
     modal.style.display = 'flex';
-    console.log('click')
 })
+
 
 
 modal.addEventListener(('click'), (event) => {

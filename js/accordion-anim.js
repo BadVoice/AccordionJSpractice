@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 content.style.maxHeight = content.scrollHeight + 'px';
 
                 control.style.cssText = `
-				background-color: rgb(79 84 91);
+				background-color: #2e2e39;
 			
 				`
             } else {

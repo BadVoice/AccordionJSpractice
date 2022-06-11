@@ -77,27 +77,36 @@ ul {
     transform: translate(-50%, -50%);
 }
 
-.accordion__content {
-    padding: 20px;
-    border-top: 1px solid transparent;
-}
-
 .accordion[open] .accordion__icon {
     transform: rotate(45deg);
 }
 
-.overlay.show {
-    visibility: visible;
+.accordion__icon {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
 }
 
-.overlay {
-    background: rgba(21, 21, 31, .98);
-    height: 100%;
+.accordion__icon::before {
+    content: "";
+    position: absolute;
     left: 50%;
-    position: fixed;
     top: 50%;
     transform: translate(-50%, -50%);
-    visibility: hidden;
-    width: 100%;
-    z-index: 998;
+    width: 50%;
+    height: 1px;
+    background: #8787a2;
+}
+
+.accordion__icon::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 50%;
+    background: #8787a2;
 }

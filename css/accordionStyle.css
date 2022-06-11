@@ -16,13 +16,18 @@
     will-change: max-height;
     transition: all 0.3s ease-out;
     box-sizing: content-box;
+    text-align: left;
+}
+
+.accordion__content {
+    text-align: left;
+    font-weight: 300;
+    font-size: 0.9em;
 }
 
 .accordion__title {
-    font-weight: bold;
-    font-size: 1.17em;
+    font-size: 1em;
     color: #bbc4d2;
-    ;
 }
 
 .accordion__icon {

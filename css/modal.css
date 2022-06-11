@@ -84,10 +84,13 @@ input {
     padding: 3rem 0;
     display: none;
     background: rgba(21, 21, 31, .98);
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .modal__inner.show {
     visibility: visible;
+    padding: 20px 50px;
 }
 
 .modal__inner {
@@ -207,43 +210,26 @@ input {
     margin: 0 auto;
 }
 
-#modalPar {
-    font-size: 14px;
-    text-align: left;
-    margin-left: 50px;
-    display: flex;
-    position: absolute;
-    width: 80%;
+.modal-close {
+    font-size: 25px;
+    width: 25px;
+    cursor: pointer;
 }
 
-.accordion__icon {
-    display: inline-block;
-    position: relative;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
+.overlay.show {
+    visibility: visible;
 }
 
-.accordion__icon::before {
-    content: "";
-    position: absolute;
+.overlay {
+    background: rgba(21, 21, 31, .98);
+    height: 100%;
     left: 50%;
+    position: fixed;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
-    height: 1px;
-    background: #8787a2;
-}
-
-.accordion__icon::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 1px;
-    height: 50%;
-    background: #8787a2;
+    visibility: hidden;
+    width: 100%;
+    z-index: 998;
 }
 
 
