@@ -1,10 +1,9 @@
-    const modalInner = document.querySelector('.modal__inner');
-    const modal = document.querySelector('.modal')
-    const modalClose = document.querySelector('.modalClose');
+modal.addEventListener('click', (event) => {
+    const modalContent = event.target.closest('.modal__inner')
 
-
-
-    modalClose.addEventListener('click', () => {
+    if (!modalContent) {
         modal.style.display = '';
-        console.log('click')
-    })
+
+    }
+
+})

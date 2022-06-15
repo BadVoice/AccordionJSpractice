@@ -83,7 +83,7 @@ input {
     z-index: 10;
     padding: 3rem 0;
     display: none;
-    background: rgba(21, 21, 31, .98);
+    background: rgb(242 242 245 / 85%);
     flex-direction: column;
     justify-content: flex-start;
 }
@@ -214,6 +214,8 @@ input {
     font-size: 25px;
     width: 25px;
     cursor: pointer;
+    text-align: center;
+    color: rgb(50 50 62 / 80%);
 }
 
 .overlay.show {
@@ -235,93 +237,49 @@ input {
 
 /*сетка*/
 
-@media (max-width: 108em) {
-    html {
-        font-size: 9px;
+@media (max-width: 830px) {
+    .modal__inner {
+        width: 90%;
+        padding: 10px;
+        font-size: 2vw;
     }
 }
 
-@media (max-width: 105em) {
-    html {
-        font-size: 8.75px;
+@media (max-width: 830px) {
+    .modal__inner.show {
+        padding: 5px;
     }
 }
 
-@media (max-width: 91.5em) {
-    html {
-        font-size: 7.9px;
+@media (max-width: 550px) {
+    .modal__inner {
+        font-size: 2.7vw;
     }
 }
 
-@media (max-width: 91em) {
-    html {
-        font-size: 8.4px;
+@media (max-width: 550px) {
+    .accordion__control {
+        text-align: left;
     }
 }
 
-@media (max-width: 90em) {
-    html {
-        font-size: 7.9px;
+@media (max-width: 450px) {
+    .accordion__control {
+        padding: 10px 20px;
+        text-align: left;
+    }
+    .open .accordion__content {
+        padding: 10px 20px;
+        text-align: left;
     }
 }
 
-@media (max-width: 80em) {
-    html {
-        font-size: 7.2px
+@media (max-width: 350px) {
+    .accordion__control {
+        padding: 10px 10px;
     }
-}
-
-@media (max-width: 72em) {
-    html {
-        font-size: 6.5px;
-    }
-}
-
-@media (max-width: 64em) {
-    html {
-        font-size: 5.5px;
-    }
-}
-
-@media (max-width: 48em) {
-    html {
-        font-size: 10px;
-    }
-}
-
-@media (max-width: 44em) {
-    html {
-        font-size: 9px;
-    }
-}
-
-@media (max-width: 38em) {
-    html {
-        font-size: 8px;
-    }
-}
-
-@media (max-width: 34em) {
-    html {
-        font-size: 7px;
-    }
-}
-
-@media (max-width: 30em) {
-    html {
-        font-size: 6px;
-    }
-}
-
-@media (max-width: 26em) {
-    html {
-        font-size: 4.5px;
-    }
-}
-
-@media (max-width: 21em) {
-    html {
-        font-size: 4.4px;
+    .open .accordion__content {
+        padding: 10px 10px;
     }
 }
 

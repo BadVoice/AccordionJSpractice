@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const self = e.currentTarget;
             const control = self.querySelector('.accordion__control');
             const content = self.querySelector('.accordion__content');
-
+            e.preventDefault();
             self.classList.toggle('open');
 
             // если открыт аккордеон

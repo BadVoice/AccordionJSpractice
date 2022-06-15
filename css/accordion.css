@@ -49,8 +49,8 @@ ul {
 .accordion__icon {
     position: relative;
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
     border-radius: 100%;
     color: #8787a2;
 }
